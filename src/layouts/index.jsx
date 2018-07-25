@@ -48,6 +48,7 @@ export default class MainLayout extends React.Component {
         <div>
           <Helmet>
             <meta name="description" content={config.siteDescription} />
+            <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           </Helmet>
           {children()}
         </div>
