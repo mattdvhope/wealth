@@ -21,8 +21,8 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "pages"
-    label: "Pages"
+  - name: "about"
+    label: "About"
     files:
       - file: "src/pages/about.jsx"
         label: "About"
