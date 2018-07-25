@@ -91,7 +91,9 @@ export default class PostTemplate extends React.Component {
             config={config}
             expanded={expanded}
           />
+        {/* 
           <Disqus postNode={postNode} expanded={expanded} />
+           */}
         </div>
 
         <PostSuggestions postNode={postNode} />
