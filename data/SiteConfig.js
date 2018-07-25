@@ -24,8 +24,8 @@ module.exports = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-material-starter",
-      iconClassName: "fa fa-github"
+      url: "https://www.facebook.com/j.gatsby.sz",
+      iconClassName: "fa fa-facebook"
     },
     {
       label: "Twitter",
@@ -34,8 +34,8 @@ module.exports = {
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
-      iconClassName: "fa fa-envelope"
+      url: "https://www.linkedin.com",
+      iconClassName: "fa fa-linkedin"
     }
   ],
   copyright: "Copyright © 2017. Material User" // Copyright string for the footer of the website and RSS feed.
