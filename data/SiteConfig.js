@@ -24,12 +24,12 @@ module.exports = {
   userLinks: [
     {
       label: "Facebook",
-      url: "https://www.facebook.com/j.gatsby.sz",
+      url: "https://www.facebook.com",
       iconClassName: "fa fa-facebook"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
+      url: "https://twitter.com",
       iconClassName: "fa fa-twitter"
     },
     {
