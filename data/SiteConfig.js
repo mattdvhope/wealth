@@ -23,7 +23,7 @@ module.exports = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
-      label: "GitHub",
+      label: "Facebook",
       url: "https://www.facebook.com/j.gatsby.sz",
       iconClassName: "fa fa-facebook"
     },
@@ -33,9 +33,14 @@ module.exports = {
       iconClassName: "fa fa-twitter"
     },
     {
-      label: "Email",
+      label: "Linkedin",
       url: "https://www.linkedin.com",
       iconClassName: "fa fa-linkedin"
+    },
+    {
+      label: "Reddit",
+      url: "https://www.reddit.com",
+      iconClassName: "fa fa-reddit"
     }
   ],
   copyright: "Copyright © 2017. Material User" // Copyright string for the footer of the website and RSS feed.
