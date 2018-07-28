@@ -38,7 +38,7 @@ class PostPreview extends Component {
     }
   }
   render() {
-    const { postInfo, fileEdges } = this.props;
+    const { postInfo, fileEdges, postDate } = this.props;
     const { mobile } = this.state;
     const expand = mobile;
     /* eslint no-undef: "off" */
@@ -61,6 +61,9 @@ class PostPreview extends Component {
             </MediaOverlay>
           </Media>
         </Link>
+        
+        {console.log(postInfo)}
+
         <CardTitle
           expander={expand}
           avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
