@@ -13,7 +13,7 @@ module.exports = {
   disqusShortname: "https-vagr9k-github-io-gatsby-material-starter", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
+  dateFormat: "MM/DD/YYYY", // Date format for display.
   userName: "Material User", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "North Pole, Earth", // User location to display in the author segment.
