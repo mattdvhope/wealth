@@ -61,9 +61,6 @@ class PostPreview extends Component {
             </MediaOverlay>
           </Media>
         </Link>
-        
-        {console.log(postInfo)}
-
         <CardTitle
           expander={expand}
           avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
