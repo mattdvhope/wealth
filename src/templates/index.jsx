@@ -1,11 +1,21 @@
 import React from "react";
 import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
+import PaginatedContent from "../layouts/PaginatedContent/PaginatedContent";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
   render() {
+    const {
+      nodes,
+      page,
+      pages,
+      total,
+      limit,
+      prev,
+      next
+    } = this.props.pathContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     const fileEdges = this.props.data.allFile.edges;
     return (
@@ -15,7 +25,10 @@ class Index extends React.Component {
           <link rel="canonical" href={`${config.siteUrl}`} />
         </Helmet>
         <SEO postEdges={postEdges} />
-        <PostListing postEdges={postEdges} fileEdges={fileEdges} />
+
+        <PaginatedContent page={page} pages={pages} total={total} limit={limit} prev={prev} next={next}>
+          <PostListing postEdges={nodes} fileEdges={fileEdges} />
+        </PaginatedContent>
       </div>
     );
   }

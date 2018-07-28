@@ -3,6 +3,7 @@ const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
+const { createPaginationPages } = require("gatsby-pagination");
 
 const postNodes = [];
 
@@ -99,6 +100,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
+    const indexPage = path.resolve("src/templates/index.jsx");
     const postPage = path.resolve("src/templates/post.jsx");
     const tagPage = path.resolve("src/templates/tag.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
@@ -106,16 +108,25 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark {
+            allMarkdownRemark(
+              limit: 1000
+              sort: { fields: [frontmatter___date], order: DESC }
+            ) {
+              totalCount
               edges {
                 node {
                   frontmatter {
+                    title
                     tags
+                    cover
+                    date
                     category
                   }
                   fields {
                     slug
                   }
+                  excerpt
+                  timeToRead
                 }
               }
             }
@@ -127,6 +138,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           console.log(result.errors);
           reject(result.errors);
         }
+
+        createPaginationPages({
+          createPage: createPage,
+          edges: result.data.allMarkdownRemark.edges,
+          component: indexPage,
+          limit: 3
+        });
 
         const tagSet = new Set();
         const categorySet = new Set();
